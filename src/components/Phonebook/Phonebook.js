@@ -4,13 +4,14 @@ import { Filter } from 'components/Filter/Filter';
 import { RotatingLines } from 'react-loader-spinner';
 import { useSelector } from 'react-redux';
 import { selectError, selectIsLoading, selectItems } from 'redux/selectors';
+import { Container } from './Phonebook.styled';
 
 export const Phonebook = () => {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
   const items = useSelector(selectItems);
   return (
-    <div>
+    <Container>
       <h1>Phonebook</h1>
       <ContactForm />
       <h2>Contacts</h2>
@@ -28,6 +29,6 @@ export const Phonebook = () => {
       )}
       {items.length > 0 ? <Filter /> : <span>Contact list is empty</span>}
       <ContactList />
-    </div>
+    </Container>
   );
 };

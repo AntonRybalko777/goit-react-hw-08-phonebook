@@ -14,7 +14,7 @@ export default function Contacts() {
   return (
     <div>
       <Helmet>
-        <title>Phonebook</title>
+        <title>My Phonebook</title>
       </Helmet>
       <Phonebook />
     </div>
