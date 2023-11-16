@@ -44,7 +44,7 @@ export const ContactForm = () => {
             dispatch(
               addContact({
                 name: values.name.trim(),
-                phone: values.number.trim(),
+                number: values.number.trim(),
               })
             );
             actions.resetForm();

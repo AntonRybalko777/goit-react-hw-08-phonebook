@@ -1,3 +1,22 @@
+import { Phonebook } from 'components/Phonebook/Phonebook';
+import { Helmet } from 'react-helmet';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchContacts } from 'redux/operations';
+
 export default function Contacts() {
-  return <div>This is Contacts page</div>;
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
+
+  return (
+    <div>
+      <Helmet>
+        <title>Phonebook</title>
+      </Helmet>
+      <Phonebook />
+    </div>
+  );
 }
