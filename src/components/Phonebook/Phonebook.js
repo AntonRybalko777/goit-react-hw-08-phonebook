@@ -4,7 +4,13 @@ import { Filter } from 'components/Filter/Filter';
 import { RotatingLines } from 'react-loader-spinner';
 import { useSelector } from 'react-redux';
 import { selectError, selectIsLoading, selectItems } from 'redux/selectors';
-import { Container, StyledHeader, StyledHeader2 } from './Phonebook.styled';
+import {
+  Container,
+  StyledHeader,
+  StyledHeader2,
+  Error,
+  Span,
+} from './Phonebook.styled';
 
 export const Phonebook = () => {
   const isLoading = useSelector(selectIsLoading);
@@ -25,9 +31,11 @@ export const Phonebook = () => {
         />
       )}
       {error && (
-        <b>Whoops! Something went wrong. Please try to reload the page.</b>
+        <Error>
+          Whops! Something went wrong. Please try to reload the page.
+        </Error>
       )}
-      {items.length > 0 ? <Filter /> : <span>Contact list is empty</span>}
+      {items.length > 0 ? <Filter /> : <Span>Contact list is empty</Span>}
       <ContactList />
     </Container>
   );
