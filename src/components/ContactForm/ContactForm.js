@@ -52,7 +52,6 @@ export const ContactForm = () => {
             name="name"
             component={TextField}
             label="Name"
-            id="standard-basic"
             variant="standard"
           />
           <StyledField
@@ -60,7 +59,6 @@ export const ContactForm = () => {
             name="number"
             component={TextField}
             label="Number"
-            id="standard-basic"
             variant="standard"
           />
           <Button type="submit" variant="contained" endIcon={<AddIcon />}>

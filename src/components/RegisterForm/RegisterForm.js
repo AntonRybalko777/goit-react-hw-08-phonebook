@@ -47,7 +47,6 @@ export const RegisterForm = () => {
           <StyledField
             component={TextField}
             name="name"
-            id="outlined-basic"
             label="Name"
             variant="outlined"
           />

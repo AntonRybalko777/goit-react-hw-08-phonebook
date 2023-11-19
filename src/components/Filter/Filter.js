@@ -11,7 +11,6 @@ export const Filter = () => {
       <TextField
         fullWidth
         size="small"
-        id="filled-basic"
         label="Find contacts by name"
         variant="filled"
         onChange={evt => {
