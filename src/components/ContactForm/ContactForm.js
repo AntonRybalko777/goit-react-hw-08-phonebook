@@ -17,7 +17,7 @@ const contactSchema = Yup.object().shape({
     .required('This field is required'),
   number: Yup.string()
     .required('This field is required')
-    .matches(/(?:\(?\+\d{2}\)?\s*)?\d+(?:[ -]*\d+)*$/, 'Ivalid format')
+    .matches(/(?:\(?\+\d{2}\)?\s*)?\d+(?:[ -]*\d+)*$/, 'Invalid format')
     .min(5, 'Min length is 5')
     .max(20, 'Max length is 20'),
 });
