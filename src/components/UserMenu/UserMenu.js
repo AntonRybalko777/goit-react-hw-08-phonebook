@@ -17,7 +17,7 @@ export const UserMenu = () => {
       }}
     >
       <span>
-        Welcome, <b>{user.name}</b>
+        Welcome, <b style={{ color: '#F9FDE5' }}>{user.name}</b>
       </span>
       <IconButton color="error" onClick={() => dispatch(logOut())}>
         <LogoutIcon />
