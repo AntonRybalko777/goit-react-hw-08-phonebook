@@ -1,4 +1,4 @@
-import { Button, Li, Ul } from './ContactList.styled';
+import { Button, Li, Ul, StyledPhone, StyledName } from './ContactList.styled';
 import { AiFillDelete } from 'react-icons/ai';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/operations';
@@ -12,7 +12,8 @@ export const ContactList = () => {
     <Ul>
       {filteredContacts.map(contact => (
         <Li key={contact.id}>
-          {contact.name} : <b>{contact.number}</b>
+          <StyledName>{contact.name}</StyledName>
+          <StyledPhone>{contact.number}</StyledPhone>
           <Button
             onClick={() => {
               dispatch(deleteContact(contact));

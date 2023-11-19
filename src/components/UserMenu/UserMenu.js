@@ -16,7 +16,7 @@ export const UserMenu = () => {
         alignItems: 'center',
       }}
     >
-      <span>
+      <span style={{ userSelect: 'none' }}>
         Welcome, <b style={{ color: '#F9FDE5' }}>{user.name}</b>
       </span>
       <IconButton color="error" onClick={() => dispatch(logOut())}>

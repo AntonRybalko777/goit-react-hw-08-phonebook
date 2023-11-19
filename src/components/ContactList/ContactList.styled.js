@@ -53,3 +53,13 @@ export const Button = styled.button`
     }
   }
 `;
+
+export const StyledPhone = styled.span`
+  position: absolute;
+  right: 35px;
+  color: #696969;
+  font-size: 14px;
+`;
+export const StyledName = styled.span`
+  margin-left: 20px;
+`;

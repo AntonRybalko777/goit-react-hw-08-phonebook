@@ -43,8 +43,8 @@ export const ContactForm = () => {
                 number: values.number.trim(),
               })
             );
-            actions.resetForm();
           }
+          actions.resetForm();
         }}
       >
         <StyledForm>
