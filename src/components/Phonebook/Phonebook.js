@@ -4,7 +4,7 @@ import { Filter } from 'components/Filter/Filter';
 import { RotatingLines } from 'react-loader-spinner';
 import { useSelector } from 'react-redux';
 import { selectError, selectIsLoading, selectItems } from 'redux/selectors';
-import { Container, StyledHeader } from './Phonebook.styled';
+import { Container, StyledHeader, StyledHeader2 } from './Phonebook.styled';
 
 export const Phonebook = () => {
   const isLoading = useSelector(selectIsLoading);
@@ -14,7 +14,7 @@ export const Phonebook = () => {
     <Container>
       <StyledHeader>Phonebook</StyledHeader>
       <ContactForm />
-      <h2>Contacts</h2>
+      <StyledHeader2>Contacts</StyledHeader2>
       {isLoading && (
         <RotatingLines
           strokeColor="grey"

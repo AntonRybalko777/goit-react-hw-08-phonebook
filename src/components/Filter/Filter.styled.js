@@ -14,3 +14,7 @@ export const Input = styled.input`
     outline: none;
   }
 `;
+
+export const Container = styled.div`
+  margin: 20px 0;
+`;

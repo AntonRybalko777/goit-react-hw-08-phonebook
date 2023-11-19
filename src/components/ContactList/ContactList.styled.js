@@ -9,7 +9,6 @@ export const Li = styled.li`
   font-weight: 500;
   padding: 5px;
   position: relative;
-  border-radius: 5px;
   transition: 200ms ease-in;
 
   &:nth-child(1n + 2) {
@@ -48,5 +47,9 @@ export const Button = styled.button`
   svg {
     color: transparent;
     transition: 200ms ease-in;
+
+    @media (max-width: 768px) {
+      color: #fba2a2;
+    }
   }
 `;
