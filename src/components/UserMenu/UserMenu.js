@@ -19,7 +19,7 @@ export const UserMenu = () => {
       <span>
         Welcome, <b>{user.name}</b>
       </span>
-      <IconButton color="inherit" onClick={() => dispatch(logOut())}>
+      <IconButton color="error" onClick={() => dispatch(logOut())}>
         <LogoutIcon />
       </IconButton>
     </div>

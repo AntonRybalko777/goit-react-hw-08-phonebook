@@ -1,8 +1,10 @@
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { Form, Field, ErrorMessage } from 'formik';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
+import { TextField } from 'formik-mui';
+import { Button } from '@mui/material';
+import { StyledForm, StyledField } from './RegisterForm.styled';
 
 const registerSchema = Yup.object().shape({
   name: Yup.string()
@@ -41,24 +43,32 @@ export const RegisterForm = () => {
           actions.resetForm();
         }}
       >
-        <Form>
-          <label>
-            Name
-            <Field name="name" />
-            <ErrorMessage name="name" component="div" />
-          </label>
-          <label>
-            Email
-            <Field name="email" type="email" />
-            <ErrorMessage name="email" component="div" />
-          </label>
-          <label>
-            Password
-            <Field name="password" type="password" />
-            <ErrorMessage name="password" component="div" />
-          </label>
-          <button type="submit">Register</button>
-        </Form>
+        <StyledForm>
+          <StyledField
+            component={TextField}
+            name="name"
+            id="outlined-basic"
+            label="Name"
+            variant="outlined"
+          />
+          <StyledField
+            name="email"
+            type="email"
+            component={TextField}
+            label="Email"
+            variant="outlined"
+          />
+          <StyledField
+            name="password"
+            type="password"
+            component={TextField}
+            label="Password"
+            variant="outlined"
+          />
+          <Button type="submit" variant="outlined">
+            Register
+          </Button>
+        </StyledForm>
       </Formik>
     </div>
   );

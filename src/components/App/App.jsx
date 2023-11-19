@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Layout } from 'components/Layout/Layout';
 import { RestrictedRoute } from 'components/RestrictedRoute';
 import { PrivateRoute } from 'components/PrivateRoute';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const Home = lazy(() => import('../../pages/Home'));
 const Contacts = lazy(() => import('../../pages/Contacts'));
@@ -21,7 +22,7 @@ export const App = () => {
   }, [dispatch]);
 
   return isRefreshing ? (
-    <b>Refreshing user...</b>
+    <CircularProgress color="inherit" />
   ) : (
     <Routes>
       <Route path="/" element={<Layout />}>

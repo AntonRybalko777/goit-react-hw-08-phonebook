@@ -1,12 +1,27 @@
 import { Helmet } from 'react-helmet';
+import styled from 'styled-components';
+import { FcBusinessContact } from 'react-icons/fc';
+
+const Header = styled.h1`
+  margin-top: 100px;
+`;
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+`;
 
 export default function Home() {
   return (
-    <div>
+    <Container>
       <Helmet>
-        <title>Homepage</title>
+        <title>Phonebook</title>
       </Helmet>
-      <h1>Welcome to Phonebook!</h1>
-    </div>
+      <Header>Welcome to Phonebook!</Header>
+      <FcBusinessContact size="100px" />
+    </Container>
   );
 }
